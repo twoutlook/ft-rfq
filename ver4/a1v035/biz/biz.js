@@ -2391,7 +2391,9 @@ function doEntire整表計算___各工序() {
         dataGrp[item][34] = (dataGrp[item][33] / dataGrp[item][31]);
         dataGrp[item][34] = dataGrp[item][34].toFixed(2);
 
-        dataGrp[item][36] = (dataGrp[item][30] - dataGrp[item][35]) * dataGrp[item][33] / 1000;
+        //dataGrp[item][36] = (dataGrp[item][30] - dataGrp[item][35]) * dataGrp[item][33] / 1000;
+       dataGrp[item][36] = (dataGrp[item][30] - dataGrp[item][35]) * dataGrp[item][33] / 1000/dataGrp[item][16];
+       
         dataGrp[item][37] = (dataGrp[item][31] + dataGrp[item][33]) * dataGrp[item][30] * 0.02 / 1000;
         //DEBUG    TEXT NUMBER PROBLEM
         //dataGrp[item][37] = dataGrp[item][31] + dataGrp[item][33];
