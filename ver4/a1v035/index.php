@@ -6,7 +6,7 @@ session_start();                // 首先开启session
 <!DOCTYPE HTML>
 <html>
     <meta charset="UTF-8">
-    <title>ver4</title>
+    <title>Project RFQ ver4</title>
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/accounting.js"></script>
 
