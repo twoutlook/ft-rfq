@@ -1,5 +1,5 @@
 <?php
-header('Location: http://120.26.88.32/a1v035');
+header('Location: a1v035');
 exit(0);
 ?>
 
