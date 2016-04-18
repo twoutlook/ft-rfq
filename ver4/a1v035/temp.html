@@ -1,0 +1,55 @@
+
+<!DOCTYPE HTML>
+<html>
+    <meta charset="UTF-8">
+    <title>a1v002</title>
+    <script src="js/jquery-1.12.0.min.js"></script>
+
+
+
+
+    <script >
+
+    </script>
+
+
+    <body>
+
+
+
+        <img src="fulltech.png" alt="FullTech" />
+        <div id='mark12345'>
+            mark12345
+        </div>
+          <div id='showArea'>
+            showArea
+        </div>
+     
+
+        <script>
+            function showMain(msg) {
+                var area = "showArea";
+                var a = "#" + area;
+                // $(a).hide(100).show(300);
+                $(a).show(500);
+                document.getElementById(area).innerHTML = msg;
+            }
+            function showMark12345() {
+                alert("showMark12345");
+                var str = "";
+                for (var i = 1; i <= 114; i++) {
+                    str += i + ",";
+                }
+
+                //    str="XXX";
+                showMain( str);
+
+
+
+            }
+            showMark12345();
+
+        </script>
+
+    </body>
+</html>

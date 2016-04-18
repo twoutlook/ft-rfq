@@ -1,0 +1,47 @@
+<?php
+session_start();                // 首先开启session
+
+
+
+ ?>
+
+
+<!DOCTYPE HTML>
+<html>
+    <meta charset="UTF-8">
+<title>ver2 spec</title>
+
+<link rel="stylesheet" href="css/ks.css">
+<link rel='stylesheet'   href='div-css.css' />
+<body>
+  <?php
+  if (!($_SESSION['user']=='user1' || $_SESSION['user']=='user2'|| $_SESSION['user']=='user3' || $_SESSION['user']=='jason')){
+      echo 'no permision to access this page';
+      echo '<h3><a href="http://120.26.88.32/"> to login </a><h3>';
+      return;
+  }
+?>
+<div id="Content">
+<h1>=== ver2 Spec ===</h1>
+<h2>
+<del>1. <mark>材料費單重和廢料重量</mark>,輸入時,由公斤改為<mark>公克</mark>。</del><br>
+<del>2. <mark>壓鑄工時</mark>,輸入時,由分鐘改為<mark>秒</mark>。</del><br>
+3. 毛刺<mark>處理工時</mark>,輸入時,仍為分鐘,<mark>保留小數點1位</mark>。以下工時均按此標準。<br>
+4. 所有良品費,輸入框內預設值為95。<br>
+5. 機加工,由單項改為下拉[傳統][CNC],費率分別設為50和72。<br>
+6. 噴沙抛丸震動的費率分別為120,80,100。<br>
+7. [073]起,費率尚未完全定案,要能讓估價人員輸入。<br>
+8. [091]按[粉體][液體][掛鍍][滾鍍][電泳][陽極氧化]排序,[掛鍍]有A+級。<br>
+9. [105]定名為"各工序費用"。<br>
+10. [106] 管銷10%和利潤5%要能輸入調整。<br>
+11. [109] [组装 小计]輸入時 [其他五金配件]和[组装费]一起輸入。<br>
+12. 輸入內容要能保存。<br>
+13. 最終要能導出為 pdf 和 Excel。<br>
+14. 審批時要能更改報價內容,要能標示出更改的部份,以顏色區分。<br>
+15. 輸入時要能一次同時輸入四個不同產品。<br>
+16. 產品圖示要能在報價單上顯示。<br>
+17. 最終報價單輸出格式先以大廠要求做數個標準模板,範例將由業務提供。<br>
+</h2>
+</div>
+</body>
+</html>

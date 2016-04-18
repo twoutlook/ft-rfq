@@ -1,0 +1,264 @@
+	body 	{ padding-top:12px; }
+
+
+/*	a{*/
+/*	text-decoration:none*/
+/*}*/
+
+ body {
+    /*background-color: #D8D8D8;*/
+    /*font-family: 'Roboto', sans-serif;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+ }
+.somecolor{
+	background-color: #D8D8D8;
+}
+
+.tdNumber{
+	text-align:right;
+}
+.tdText{
+	text-align:center;
+}
+
+
+
+  input{
+  	 /*background-color: white;*/
+ 	 padding: 8px 12px;
+ 	  font-size: 95%;
+ 	  border-radius:10px;
+ 	   outline-width: 0;
+ }
+
+ /*table{*/
+ 	 /*border-radius:10px;*/
+ /*	 padding: 8px 12px;*/
+ /*	  font-size: 120%;*/
+ /*}*/
+
+
+
+table th:first-child{
+  border-radius:10px 0 0 10px;
+}
+table th:last-child{
+  border-radius:0 10px 10px 0;
+}
+ table td:first-child{
+  border-radius:10px 0 0 10px;
+}
+table td:last-child{
+  border-radius:0 10px 10px 0;
+}
+
+/*  caption {*/
+/*  	 text-align: left;*/
+/*  	 color: white;*/
+/*    background-color: #3F51B5;*/
+/*     padding: 8px 12px;*/
+/* }*/
+table{
+	 /*padding: 8px 12px;*/
+     /*border:2;*/
+         border-style: solid;
+    border-color: #D8D8D8;
+}
+.flat-table {
+    /*border:2;*/
+  /*display: block;*/
+  font-size: 115%;
+  /*overflow: auto;*/
+  width: auto;
+}
+
+th {
+    background-color: #3F51B5;
+    color: white;
+    font-weight: 500;
+    font-weight: normal;
+/*//    padding: 20px 30px;*/
+        padding: 8px 12px;
+    text-align: center;
+}
+
+td {
+    background-color:  #E8EAF6;
+    font-weight: 400;
+    /*color: rgb(111, 111, 111);*/
+    color:black;
+     padding: 8px 12px;
+}
+
+label,button,select{
+    /*  background-color: #3F51B5;*/
+    /*color: white;*/
+      font-size: 115%;
+      outline-width: 0;
+      border-radius:10px 10px 10px 10px;
+    background-color: #03A9F4;
+    font-weight: 400;
+    color: white;
+     padding: 8px 12px;
+}
+
+button{
+	background-color: #F44336;
+	/*background-color: DarkBlue ;*/
+
+}
+
+.bgBarkBlue{
+		background-color: DarkBlue ;
+}
+.bgYellow{
+		background-color: yellow ;
+	color:black;
+}
+
+.bgRed{
+		background-color: #F44336;
+}
+.bgGray{
+		background-color: #808080;
+}
+
+.bgIndigo {
+		background-color: #4B0082;
+}
+
+.bgSeaGreen{
+		background-color: #2E8B57;
+}
+.bgRoyalBlue{
+		background-color: #4169E1;
+}
+.bgBrown{
+	/*background-color: #A52A2A;   for LimeGreen  */
+	/*http://www.computerhope.com/htmcolor.htm#color-codes*/
+background-color:#41A317
+}
+.bgDeepPurple{
+		background-color: #36013f;
+}
+
+
+input{
+	background-color: #727272;
+	 color: #B6B6B6;
+}
+
+  /*.section-title{*/
+  /*    border-radius:10px 10px 10px 10px; background:#FFC107 ; font-size:120%*/
+  /*}*/
+
+  /*https://www.google.com/design/spec/style/color.html#color-color-palette*/
+
+
+
+.user0{
+	background-color:#F5F5F5;
+		color:black;
+}
+.user1{
+	background-color:red;
+		color:black;
+}
+.user2{
+	background-color:pink;
+	color:black;
+}
+.user3{
+	background-color:purple;
+	color:black;
+}
+.user4{
+	background-color:Indigo;
+	color:black;
+}
+.user5{
+	background-color:Blue;
+	color:black;
+}
+.user6{
+	background-color:Cyan;
+	color:black;
+}
+.user7{
+	background-color:Teal;
+	color:black;
+}
+.user8{
+	background-color:Green;
+	color:black;
+}
+.user9{
+	background-color:Lime;
+	color:black;
+}
+.user10{
+	background-color:Yellow;
+	color:black;
+}
+.user11{
+	background-color:Brown;
+	color:black;
+}
+.user12{
+	background-color:Orange;
+	color:black;
+}
+
+
+.user_{
+	background-color:#F5F5F5;
+		color:black;
+}
+.userA{
+	background-color:red;
+		color:black;
+}
+.userB{
+	background-color:pink;
+	color:black;
+}
+.userC{
+	background-color:purple;
+	color:black;
+}
+.userD{
+	background-color:Indigo;
+	color:black;
+}
+.userE{
+	background-color:Blue;
+	color:black;
+}
+.userF{
+	background-color:Cyan;
+	color:black;
+}
+.userG{
+	background-color:Teal;
+	color:black;
+}
+.userH{
+	background-color:Green;
+	color:black;
+}
+.userI{
+	background-color:Lime;
+	color:black;
+}
+.userJ{
+	background-color:Yellow;
+	color:black;
+}
+.userK{
+	background-color:Brown;
+	color:black;
+}
+.userL{
+	background-color:Orange;
+	color:black;
+}
