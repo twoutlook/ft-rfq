@@ -36,7 +36,7 @@ viewArr[19] = [7, 100, 101, 102, 103, 104];
 var arrInputOverheadProfit = [131];
 var arrInputYield = [47, 57, 68, 168, 89];
 var arrInputRMB = [19, 20, 21, 22, 81, 94, 98, 103, 107, 108, 112];
-var arrInputInt = [11, 16, 17, 42, 33, 50, 54, 61, 66, 166, 71, 75, 93, 97, 101];
+var arrInputInt = [11, 16, 17, 31, 42, 33, 50, 54, 61, 66, 166, 71, 75, 93, 97, 101];
 var arrInputText = [7, 8, 9, 13, 18, 92];
 var arrInputFloat = [80, 86, 87, 88, 90, 160];
 
@@ -340,7 +340,7 @@ function getTxtInput(item, row) {
 //    var str = "&nbsp;<input type='text' maxlength='60' size='16' value='" + value + "' " + "id='" + id + "'   />";
 
     var className = "";
-//    str += "<button onclick='" + trigger + "' type='submit' " + className + " > ok </button>";
+ //   str += "<button onclick='" + trigger + "' type='submit' " + className + " > ok </button>";
     return str;
 }
 function getDdl012(item) {
@@ -417,23 +417,6 @@ function getDdl074(item) {
     str += "</select>";
     return str;
 }
-
-function getDdl010V2(item) {
-    var jsonStr = '[{"A": "A356 ","B": "13.247863247863","C": "11.247863247863"}, {"A": "A360 ","B": "13.247863247863","C": "11.247863247863"}, {"A": "A380 ","B": "13.247863247863","C": "11.247863247863"}, {"A": "A413 ","B": "13.247863247863","C": "11.247863247863"}, {"A": "ADC12 ","B": "12.820512820513","C": "10.820512820513"}, {"A": "AlSi10Mg ","B": "13.247863247863","C": "11.247863247863"}, {"A": "ZINC-2 ","B": "14.957264957265","C": "11.957264957265"}, {"A": "ZINC-3 ","B": "14.957264957265","C": "11.957264957265"}, {"A": "ZINC-5 ","B": "14.957264957265","C": "11.957264957265"}, {"A": "ZINC-8 ","B": "14.957264957265","C": "11.957264957265"}]';
-    var jsonObj = $.parseJSON(jsonStr);
-    var str = "";
-//    str += getDdlSelectId('029', item);
-    str += getDdlSelectIdLine(item, 10);
-
-    str += '<option value="===">===選擇材質規格===</option>';
-    for (var i = 0; i < jsonObj.length; i++) {
-        temp = jsonObj[i]['A'] + '|' + jsonObj[i]['B'] + '|' + jsonObj[i]['C'];
-        str += '<option value="' + temp + '">' + jsonObj[i]['A'] + '</option>';
-    }
-    str += "</select>";
-    return str;
-}
-
 //function getDdl材料規格() {
 function getDdl010(item) {
     var jsonStr = '[{"A": "A356 ","B": "13.247863247863","C": "11.247863247863"}, {"A": "A360 ","B": "13.247863247863","C": "11.247863247863"}, {"A": "A380 ","B": "13.247863247863","C": "11.247863247863"}, {"A": "A413 ","B": "13.247863247863","C": "11.247863247863"}, {"A": "ADC12 ","B": "12.820512820513","C": "10.820512820513"}, {"A": "AlSi10Mg ","B": "13.247863247863","C": "11.247863247863"}, {"A": "ZINC-2 ","B": "14.957264957265","C": "11.957264957265"}, {"A": "ZINC-3 ","B": "14.957264957265","C": "11.957264957265"}, {"A": "ZINC-5 ","B": "14.957264957265","C": "11.957264957265"}, {"A": "ZINC-8 ","B": "14.957264957265","C": "11.957264957265"}]';
@@ -453,6 +436,21 @@ function getDdl029(item) {
     var jsonObj = $.parseJSON(jsonStr);
     var str = "";
     str += getDdlSelectId('029', item);
+    str += '<option value="===">===選擇材質規格===</option>';
+    for (var i = 0; i < jsonObj.length; i++) {
+        temp = jsonObj[i]['A'] + '|' + jsonObj[i]['B'] + '|' + jsonObj[i]['C'];
+        str += '<option value="' + temp + '">' + jsonObj[i]['A'] + '</option>';
+    }
+    str += "</select>";
+    return str;
+}
+function getDdl010V2(item) {
+    var jsonStr = '[{"A": "A356 ","B": "13.247863247863","C": "11.247863247863"}, {"A": "A360 ","B": "13.247863247863","C": "11.247863247863"}, {"A": "A380 ","B": "13.247863247863","C": "11.247863247863"}, {"A": "A413 ","B": "13.247863247863","C": "11.247863247863"}, {"A": "ADC12 ","B": "12.820512820513","C": "10.820512820513"}, {"A": "AlSi10Mg ","B": "13.247863247863","C": "11.247863247863"}, {"A": "ZINC-2 ","B": "14.957264957265","C": "11.957264957265"}, {"A": "ZINC-3 ","B": "14.957264957265","C": "11.957264957265"}, {"A": "ZINC-5 ","B": "14.957264957265","C": "11.957264957265"}, {"A": "ZINC-8 ","B": "14.957264957265","C": "11.957264957265"}]';
+    var jsonObj = $.parseJSON(jsonStr);
+    var str = "";
+//    str += getDdlSelectId('029', item);
+    str += getDdlSelectIdLine(item, 10);
+
     str += '<option value="===">===選擇材質規格===</option>';
     for (var i = 0; i < jsonObj.length; i++) {
         temp = jsonObj[i]['A'] + '|' + jsonObj[i]['B'] + '|' + jsonObj[i]['C'];
@@ -669,7 +667,7 @@ function sum() {
 function getFinalTableGrp(rowFrom, rowTo) {
     //setValStr();
     var str = "";
-    str += "<table  class='ExcelTable2007'>";
+    str += "<table>";
     str += "<tr><td></td><td></td><td></td>";
 
     for (var i = 1; i <= submitCnt; i++) {
@@ -724,15 +722,14 @@ function getFinalTableGrp(rowFrom, rowTo) {
 function getFinalTableGrpByArray(arr) {
     //setValStr();
     var str = "";
-    str += "<table   class='ExcelTable2007'>";
+    str += "<table>";
     str += "<tr><td></td><td></td><td></td>";
 
     for (var i = 1; i <= submitCnt; i++) {
         if (sys顯示模式 == 1) {
-            str += "<th  class='heading'>" + i + "數據</th>";
+            str += "<th>" + i + "數據</th>";
         }
-//        str += "<th>" + i + "</th>";
-     str += "<th  class='heading'>" + i + "</th>";
+        str += "<th>" + i + "</th>";
 
     }
     str += "<td></td>";
@@ -801,9 +798,6 @@ function getSegInTd(i) {
 
 function getB(i) {
     return  '<th>' + strSeg[i] + '</th>';
-}
-function getTdColB(i) {
-    return  '<td>' + strSeg[i] + '</td>';
 }
 function getRem(i) {
 //    return  '<td>' + strRem[i] + '</td>';
@@ -2552,7 +2546,8 @@ function onChangeDdl(item, row) {
 function setMainGrp() {
     for (var item = 0; item < COL_CNT; item++) {
 //        setMain(item, 10, getDdl010(item));
-        setMain(item, 10, getDdl010V2(item));     
+        setMain(item, 10, getDdl010V2(item));
+        
 
 //        setMain(item, 29, getDdl029V2(item));
 
@@ -2716,33 +2711,18 @@ function getMainTableGrpByArray(arr) {
         checkShowRemark = false;
     }
 
-//<table class="fixed">
-//    <col width="20px" />
-//    <col width="30px" />
-//    <col width="40px" />
-
-
     var str = "";
-    str += "<table class='fixed ExcelTable2007'>";
-//  str += "<table>";
-
-
-//    str += "<tr><td></td><td></td><td></td>";
-//    for (var i = 0; i < checkArr.length; i++) {
-//        if (checkArr[i].checked === true) {
-//            str += "<td  class='Heading'>" + (1 + i) + "</td>";
-//        }
-//    }
-       str += "<tr><th   class='Heading'></th><th   class='Heading'></th><th class='Heading'></th>";
+    str += "<table>";
+    str += "<tr><td></td><td></td><td></td>";
     for (var i = 0; i < checkArr.length; i++) {
         if (checkArr[i].checked === true) {
-            str += "<th  class='Heading'>" + (1 + i) + "</th>";
+            str += "<th >" + (1 + i) + "</th>";
         }
     }
 
     // Remark TD as TH
     if (checkShowRemark) {
-        str += "<th   class='Heading'></th>";
+        str += "<td></td>";
     }
     str += "</tr>";
 
@@ -2755,14 +2735,12 @@ function getMainTableGrpByArray(arr) {
     var tdClass = new Array(2);
     tdClass[0] = "<td class='tdNumber'>";
     tdClass[1] = "<td class='tdText'>";
-    var textArr = [7, 8, 9, 10, 12, 13, 16, 17, 18, 29, 40, 79, 85, ];
+    var textArr = [7, 8, 9, 10, 12, 13, 16, 17, 18, 29, 40, 79, 85 ];
 
     for (var i = 0; i < arr.length; i++) {
         str += "<tr>";
         str += getA(arr[i]);
-//        str += getB(arr[i]);
-        str += getTdColB(arr[i]);
-        
+        str += getB(arr[i]);
         str += getC(arr[i]);// //actual data value
         for (var item = 0; item < checkArr.length; item++) {
             if (checkArr[item].checked === true) {
@@ -2773,7 +2751,8 @@ function getMainTableGrpByArray(arr) {
 //                str += "<td >" + item+" "+arr[i] +" "+ compGrp[item][arr[i]]+"</td>";
                 if (checkToEdit) {
                     if (compGrp[item][arr[i]].length > 0) {
-                        if (!isSales && arr[i] === 7) { //雖然顯示 项目 料号 ,但不給編輯
+//                        if (!isSales && arr[i] === 7) { //雖然顯示 项目 料号 ,但不給編輯
+                        if (!isSales && arr[i] === 777) { //NOTE by Mark, 2016-4-5, disable 7 case
                             str += tdStart + "<b><span id='item" + item + "row" + arr[i] + "'> " + dataStrGrp[item][arr[i]] + "</span></b></td>";
 
                         } else {
@@ -2944,9 +2923,8 @@ function btnStart() {
         btnInit();
         isInit = true;
     }
+//    var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 131, 106, 107, 108, 109, 110, 111, 112, 113, 114];
     var radios = document.getElementsByName('checkRowSet');
-//    var radios = 0;
-    
     isSales = false;
     for (var i = 0, length = radios.length; i < length; i++) {
         if (radios[i].checked) {

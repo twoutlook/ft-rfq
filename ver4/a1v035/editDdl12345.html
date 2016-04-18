@@ -1,0 +1,66 @@
+<?php
+session_start();                // 首先开启session
+?>
+
+
+<!DOCTYPE HTML>
+<html>
+    <meta charset="UTF-8">
+    <title>ver4</title>
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/accounting.js"></script>
+
+
+    <script src="../util/Blob.js"></script>
+    <script src="../util/canvas-toBlob.js"></script>
+    <script src="../util/FileSaver.js"></script>
+    <!-- <script src="biz/demo.js"></script> -->
+
+    <!-- <script async="" src="https://cdn.rawgit.com/eligrey/Blob.js/master/Blob.js"/>
+    <script async="" src="https://cdn.rawgit.com/eligrey/canvas-toBlob.js/master/canvas-toBlob.js"/>
+    <script async="" src="https://cdn.rawgit.com/eligrey/FileSaver.js/master/FileSaver.js"/>
+    <script async="" src="https://cdn.rawgit.com/eligrey/FileSaver.js/master/demo/demo.js"/>  -->
+
+
+
+    <script src="biz/ddl.js"></script>
+    <script src="biz/format.js"></script>
+    <!--<script src="biz/remark.js"></script>-->
+
+
+    <script src="biz/bizInit.js"></script>
+    <script src="biz/biz.js"></script>
+
+
+
+    <!--<link rel="stylesheet" href="bootstrap/css/bootstrap.css">-->
+    <!--<script src="bootstrap/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>-->
+
+
+    <link rel="stylesheet" href="css/ks.css">
+
+    <body>
+        <?php
+        if (!($_SESSION['user']=='user1' || $_SESSION['user']=='user2'|| $_SESSION['user']=='user3' || $_SESSION['user']=='jason')){
+        echo 'no permision to access this page';
+        echo '<h3><a href="http://120.26.88.32/"> to login </a></h3>';
+        return;
+        }
+        ?>
+
+        <div id="logo">
+            <img src="fulltech.png" alt="FullTech" />
+            <?php
+            echo ' | <a target="_blank" href="spec.php"> ver4 spec </a> | ';
+            echo '  用戶:'.$_SESSION['user'];
+            echo ' <a href="http://120.26.88.32/logout.php"> 登出 </a>';
+
+
+            ?>
+            <br>
+        </div>
+        
+        to show all ddl first
+
+    </body>
+</html>

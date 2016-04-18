@@ -6,7 +6,7 @@ session_start();                // 首先开启session
 <!DOCTYPE HTML>
 <html>
     <meta charset="UTF-8">
-    <title>ver3</title>
+    <title>ver4</title>
     <script src="js/jquery-1.12.0.min.js"></script>
     <script src="js/accounting.js"></script>
 
@@ -51,7 +51,7 @@ session_start();                // 首先开启session
         <div id="logo">
             <img src="fulltech.png" alt="FullTech" />
             <?php
-            echo ' | <a target="_blank" href="spec.php"> ver3 spec </a> | ';
+            echo ' | <a target="_blank" href="spec.php"> ver4 spec </a> | ';
             echo '  用戶:'.$_SESSION['user'];
             echo ' <a href="http://120.26.88.32/logout.php"> 登出 </a>';
 
@@ -74,16 +74,17 @@ session_start();                // 首先开启session
             <input type="radio" value="1" checked='checked' name="checkShowRemark" onClick="btnStart()"/>是
             <input type="radio" value="2" name="checkShowRemark" onClick="btnStart()"/>否
 
-            <br>&nbsp;&nbsp;<span style="background-color: lightskyblue">可視行號組</span>
+            <!--<br>-->
+            &nbsp;&nbsp;<span style="background-color: lightskyblue">可視行號組</span>
             <input type="radio" value="1" checked='checked' name="checkRowSet" onClick="btnStart()"/>all
-            <input type="radio" value="2" name="checkRowSet" onClick="btnStart()"/>業務
+<!--            <input type="radio" value="2" name="checkRowSet" onClick="btnStart()"/>業務
             <input type="radio" value="3" name="checkRowSet" onClick="btnStart()"/>模具
             <input type="radio" value="3" name="checkRowSet" onClick="btnStart()"/>各工序
             <input type="radio" value="3" name="checkRowSet" onClick="btnStart()"/>管銷利潤
             <input type="radio" value="3" name="checkRowSet" onClick="btnStart()"/>組裝
-            <input type="radio" value="3" name="checkRowSet" onClick="btnStart()"/>總計
+            <input type="radio" value="3" name="checkRowSet" onClick="btnStart()"/>總計-->
 
-            <br>
+<!--            <br>
             <input type="radio" value="4" name="checkRowSet" onClick="btnStart()"/>1)材料
             <input type="radio" value="5" name="checkRowSet" onClick="btnStart()"/>2)压铸
             <input type="radio" value="6" name="checkRowSet" onClick="btnStart()"/>3)毛刺处理
@@ -96,7 +97,7 @@ session_start();                // 首先开启session
             <input type="radio" value="13" name="checkRowSet" onClick="btnStart()"/>10)粉体液体烤漆丝网印
             <input type="radio" value="14" name="checkRowSet" onClick="btnStart()"/>11)其它特殊
             <input type="radio" value="15" name="checkRowSet" onClick="btnStart()"/>12)气密性测试
-            <input type="radio" value="16" name="checkRowSet" onClick="btnStart()"/>13)筛选包装
+            <input type="radio" value="16" name="checkRowSet" onClick="btnStart()"/>13)筛选包装-->
 
             <!--&nbsp;&nbsp; Show Input<input type="checkbox" name="showInput" value="Car" checked="checked"  onClick="btnStart()" />--> 
         </div>
