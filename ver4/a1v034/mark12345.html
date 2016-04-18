@@ -1,0 +1,125 @@
+
+<!DOCTYPE HTML>
+<html>
+    <meta charset="UTF-8">
+    <title>a1v002</title>
+    <script src="js/jquery-1.12.0.min.js"></script>
+
+
+
+
+    <script src="biz/basic.js"></script>
+    <script src="biz/ddl.js"></script>
+    <script src="biz/format.js"></script>
+    <script src="biz/remark.js"></script>
+
+    <script src="biz/btn.js"></script>
+    <script src="biz/biz.js"></script>
+
+    <link rel="stylesheet" href="css/ks.css">
+
+    <body>
+    <a href="#" name="MicrosoftExcelButton"></a>
+     
+    <table>
+      <thead><tr>
+        <th>Column A</th>
+        <th>Column B</th>
+        </tr></thead>
+      <tbody>
+        <tr>
+          <td>Cell A1</td>
+          <td>Cell B1</td>
+        </tr>
+        <tr>
+          <td>Cell A2</td>
+          <td>Cell B2</td>
+        </tr>
+      </tbody>
+    </table>
+     
+    <script type="text/javascript" src="http://r.office.microsoft.com/r/rlidExcelButton?v=1&kip=1"></script>
+
+
+        <img src="fulltech.png" alt="FullTech" />
+        <div id='mark12345'>
+            mark12345
+        </div>
+   <input type="file" id="file-input" />
+<h3>Contents of the file:</h3>
+<pre id="file-content"></pre>
+
+        <script>
+            function readSingleFile(e) {
+  var file = e.target.files[0];
+  if (!file) {
+    return;
+  }
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var contents = e.target.result;
+    displayContents(contents);
+  };
+  reader.readAsText(file);
+}
+
+function displayContents(contents) {
+  var element = document.getElementById('file-content');
+  element.innerHTML = contents;
+}
+
+document.getElementById('file-input')
+  .addEventListener('change', readSingleFile, false);
+
+            function showMark12345() {
+                var str = "";
+                // str+=showBtnColor('btn113','title113',999);
+                str += "";
+                //  var btnTitleStr = '[{},{"A": 1,"B": null,"C": null,"D": ""}, {"A": 2,"B": null,"C": null,"D": ""}, {"A": 3,"B": null,"C": null,"D": ""}, {"A": 4,"B": null,"C": null,"D": ""}, {"A": 5,"B": null,"C": null,"D": ""}, {"A": 6,"B": null,"C": null,"D": ""}, {"A": 7,"B": null,"C": null,"D": "string "}, {"A": 8,"B": null,"C": null,"D": ""}, {"A": 9,"B": null,"C": null,"D": "string"}, {"A": 10,"B": null,"C": null,"D": "string"}, {"A": 11,"B": null,"C": null,"D": "number"}, {"A": 12,"B": null,"C": null,"D": "string"}, {"A": 13,"B": "年需求量","C": "年需求量","D": "number"}, {"A": 14,"B": null,"C": null,"D": ""}, {"A": 15,"B": null,"C": null,"D": ""}, {"A": 16,"B": null,"C": null,"D": "number"}, {"A": 17,"B": null,"C": null,"D": ""}, {"A": 18,"B": null,"C": null,"D": "number"}, {"A": 19,"B": "壓鑄模費用","C": "压铸模费用","D": "number"}, {"A": 20,"B": "切邊模費用","C": "切边模费用","D": "number"}, {"A": 21,"B": "加工夾治具費用","C": "加工夹治具费用","D": "number"}, {"A": 22,"B": "烤漆夾治具費用","C": "烤漆夹治具费用","D": "number"}, {"A": 23,"B": "模具總價","C": "模具总价","D": "number"}, {"A": 24,"B": null,"C": null,"D": "number"}, {"A": 25,"B": null,"C": null,"D": ""}, {"A": 26,"B": null,"C": null,"D": ""}, {"A": 27,"B": null,"C": null,"D": ""}, {"A": 28,"B": null,"C": null,"D": ""}, {"A": 29,"B": null,"C": null,"D": "string"}, {"A": 30,"B": null,"C": null,"D": "number"}, {"A": 31,"B": null,"C": null,"D": "number"}, {"A": 32,"B": null,"C": null,"D": "number"}, {"A": 33,"B": null,"C": null,"D": "number"}, {"A": 34,"B": null,"C": null,"D": "number"}, {"A": 35,"B": null,"C": null,"D": "number"}, {"A": 36,"B": null,"C": null,"D": "number"}, {"A": 37,"B": null,"C": null,"D": "number"}, {"A": 38,"B": "材料費","C": "材料费","D": "number"}, {"A": 39,"B": null,"C": null,"D": ""}, {"A": 40,"B": null,"C": null,"D": "string"}, {"A": 41,"B": null,"C": null,"D": "number"}, {"A": 42,"B": null,"C": null,"D": "number"}, {"A": 43,"B": null,"C": null,"D": "number"}, {"A": 44,"B": null,"C": null,"D": "number"}, {"A": 45,"B": null,"C": null,"D": "number"}, {"A": 46,"B": null,"C": null,"D": "number"}, {"A": 47,"B": null,"C": null,"D": "number"}, {"A": 48,"B": "壓鑄費 ","C": "压铸费","D": "number"}, {"A": 49,"B": null,"C": null,"D": ""}, {"A": 50,"B": null,"C": null,"D": "number"}, {"A": 51,"B": null,"C": null,"D": "number"}, {"A": 52,"B": "毛刺處理費 ","C": "毛刺处理费","D": "number"}, {"A": 53,"B": null,"C": null,"D": ""}, {"A": 54,"B": null,"C": null,"D": "number"}, {"A": 55,"B": null,"C": null,"D": "number"}, {"A": 56,"B": null,"C": null,"D": "number"}, {"A": 57,"B": null,"C": null,"D": "number"}, {"A": 58,"B": null,"C": null,"D": ""}, {"A": 59,"B": "外觀打磨費 ","C": "4)外观打磨费","D": "number"}, {"A": 60,"B": null,"C": null,"D": ""}, {"A": 61,"B": null,"C": null,"D": "number"}, {"A": 62,"B": null,"C": null,"D": "number"}, {"A": 63,"B": null,"C": null,"D": "number"}, {"A": 64,"B": "平整度整形費 ","C": "平整度 整形费","D": "number"}, {"A": 65,"B": null,"C": null,"D": ""}, {"A": 66,"B": null,"C": null,"D": "number"}, {"A": 67,"B": null,"C": null,"D": "number"}, {"A": 68,"B": null,"C": null,"D": "number"}, {"A": 69,"B": "機加工 ","C": "机加工","D": "number"}, {"A": 70,"B": null,"C": null,"D": ""}, {"A": 71,"B": null,"C": null,"D": "number"}, {"A": 72,"B": null,"C": null,"D": "number"}, {"A": 73,"B": "冷噴熱燒毛刺 ","C": "冷喷.热烧毛刺","D": "number"}, {"A": 74,"B": null,"C": null,"D": ""}, {"A": 75,"B": null,"C": null,"D": "number"}, {"A": 76,"B": null,"C": null,"D": "number"}, {"A": 77,"B": "噴沙抛丸震動研磨 ","C": "噴沙抛丸震動研磨 ","D": "number"}, {"A": 78,"B": null,"C": null,"D": ""}, {"A": 79,"B": null,"C": null,"D": "string"}, {"A": 80,"B": null,"C": null,"D": "number"}, {"A": 81,"B": null,"C": null,"D": "number"}, {"A": 82,"B": "皮膜處理","C": "皮膜处理","D": "number"}, {"A": 83,"B": null,"C": null,"D": ""}, {"A": 84,"B": null,"C": null,"D": ""}, {"A": 85,"B": null,"C": null,"D": "string"}, {"A": 86,"B": null,"C": null,"D": "number"}, {"A": 87,"B": null,"C": null,"D": "number"}, {"A": 88,"B": null,"C": null,"D": "number"}, {"A": 89,"B": null,"C": null,"D": "number"}, {"A": 90,"B": null,"C": null,"D": "number"}, {"A": 91,"B": "粉體液體烤漆絲網印 ","C": "粉体液体烤漆丝网印","D": "number"}, {"A": 92,"B": null,"C": null,"D": ""}, {"A": 93,"B": null,"C": null,"D": "number"}, {"A": 94,"B": null,"C": null,"D": "number"}, {"A": 95,"B": "其它特殊處理","C": "其它特殊处理","D": "number"}, {"A": 96,"B": null,"C": null,"D": ""}, {"A": 97,"B": null,"C": null,"D": "number"}, {"A": 98,"B": null,"C": null,"D": "number"}, {"A": 99,"B": "氣密性測試","C": "气密性测试","D": "number"}, {"A": 100,"B": null,"C": null,"D": ""}, {"A": 101,"B": null,"C": null,"D": "number"}, {"A": 102,"B": null,"C": null,"D": "number"}, {"A": 103,"B": null,"C": null,"D": "number"}, {"A": 104,"B": "篩選包裝","C": "筛选包装","D": "number"}, {"A": 105,"B": "Sub-Total 合計","C": "Sub-Total 合计","D": "number"}, {"A": 106,"B": "管銷（Overhead） 10% + 利潤（profit）5% = 15% ","C": "管销（Overhead） 10% +（利润）profit5% = 15% ","D": "number"}, {"A": 107,"B": "其他五金配件","C": "其他五金配件：","D": "number"}, {"A": 108,"B": "組裝費","C": "组装费：","D": "number"}, {"A": 109,"B": "組裝 小計","C": "组装 小计：","D": "number"}, {"A": 110,"B": "總計（未税）：","C": "总计（未税）：","D": "number"}, {"A": 111,"B": "VAT 税金：17%","C": "VAT 税金：17%","D": "number"}, {"A": 112,"B": "海外運輸費用：","C": "海外运输费用：","D": "number"}, {"A": 113,"B": "總計（含税）：","C": "总计（含税）：","D": "number"}, {"A": 114,"B": "總計（美元）：","C": "总计（美元）：","D": "number"}]';
+                var jsonStr = '[{},{"A": 1,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 2,"B": null,"C": null,"D": "","E": null,"F": null}, {"A": 3,"B": null,"C": "接受询价日期：","D": null,"E": null,"F": null}, {"A": 4,"B": null,"C": "业务担当：","D": "","E": null,"F": "Remark "}, {"A": 5,"B": null,"C": "简图 ","D": "#1 ","E": null,"F": null}, {"A": 6,"B": null,"C": "产品简图 ","D": null,"E": null,"F": null}, {"A": 7,"B": "","C": "项目 料号 ","D": "五菱电池包底壳-1 ","E": "五菱电池包上盖-2 ","F": null}, {"A": 8,"B": null,"C": "品名 / 图纸版本号：","D": "","E": "","F": null}, {"A": 9,"B": null,"C": "产品外形尺寸","D": "1161*865*111 ","E": "1039*790*152.5 ","F": null}, {"A": 10,"B": null,"C": "材质规格： ","D": "AlSi10Mg ","E": "AlSi10Mg ","F": "請下拉選擇材質套出單價 "}, {"A": 11,"B": null,"C": "产品单重（公斤）：","D": "12.17 ","E": "7.45 ","F": "估價人員輸入單重"}, {"A": 12,"B": null,"C": "表面要求： ","D": "电泳 ","E": "电泳 ","F": "請下拉選擇表面要求 "}, {"A": 13,"B": null,"C": "年需求量：","D": "120,000.00 ","E": "120,000.00 ","F": "估價人員輸入年需求量"}, {"A": 14,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 15,"B": null,"C": "模具费用： ","D": null,"E": null,"F": null}, {"A": 16,"B": null,"C": "模穴数 ","D": "1 ","E": "1 ","F": "估價人員輸入模穴數 "}, {"A": 17,"B": null,"C": "侧滑模数/油压抽芯数 ","D": null,"E": null,"F": null}, {"A": 18,"B": null,"C": "模具寿命：","D": "100,000 ","E": "100,000 ","F": "估價人員輸入模具壽命"}, {"A": 19,"B": null,"C": "压铸模费用： ","D": "1600000","E": "1200000","F": "估價人員輸入模具壓鑄模費用 "}, {"A": 20,"B": null,"C": "切边模费用： ","D": "","E": "","F": "估價人員輸入切邊模費用 "}, {"A": 21,"B": null,"C": "加工夹治具费用： ","D": "","E": "","F": "估價人員輸入加工夾治具模費用 "}, {"A": 22,"B": null,"C": "烤漆夹治具费用： ","D": "","E": "","F": "估價人員輸入模具壓鑄模費用 "}, {"A": 23,"B": null,"C": "模具总价（人民币）： ","D": "1600000","E": "1200000","F": null}, {"A": 24,"B": null,"C": "模具总价（USD）： ","D": null,"E": null,"F": null}, {"A": 25,"B": null,"C": "","D": "","E": "","F": null}, {"A": 26,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 27,"B": null,"C": "产品单价： ","D": null,"E": null,"F": null}, {"A": 28,"B": "* ","C": "1)材料费 ： ","D": null,"E": null,"F": null}, {"A": 29,"B": "1-1） ","C": "材质规格：","D": "AlSi10Mg","E": "AlSi10Mg","F": null}, {"A": 30,"B": "1-2） ","C": "材料单价/KG :","D": "#N/A","E": "#N/A","F": "由sheet2自動帶出"}, {"A": 31,"B": "1-3） ","C": "单重（公斤）：","D": "12.17 ","E": "7.45 ","F": null}, {"A": 32,"B": "1-4） ","C": "产品材料费（净重价格）： ","D": "#N/A","E": "#N/A","F": null}, {"A": 33,"B": "1-5） ","C": "料柄流道渣包等废料重量(公斤)： ","D": "8.5 ","E": "8.0 ","F": "估價人員輸入廢料重量"}, {"A": 34,"B": "1-6） ","C": "料柄流道渣包比率 ： ","D": "0.69843878389482","E": "1.0738255033557","F": null}, {"A": 35,"B": "1-7） ","C": "料柄流道渣包等废料价格/Kg： ","D": "#N/A","E": "#N/A","F": "由sheet2自動帶出"}, {"A": 36,"B": "1-8） ","C": "料柄流道渣包回收价差损失额 ： ","D": "#N/A","E": "#N/A","F": null}, {"A": 37,"B": "1-9） ","C": "压铸熔炼材料氧化损耗(量） 2% ","D": "#N/A","E": "#N/A","F": null}, {"A": 38,"B": null,"C": "材料费 小计： ","D": "#N/A","E": "#N/A","F": null}, {"A": 39,"B": "* ","C": "2)压铸费(含切边）： ","D": null,"E": null,"F": null}, {"A": 40,"B": "2-1） ","C": "适用机型： ","D": "鋁-3000T ","E": "鋁-3000T ","F": "請下拉選擇壓鑄機台機型 "}, {"A": 41,"B": "2-2） ","C": "设备费率/H： ","D": "#N/A","E": "#N/A","F": "由sheet2自動帶出"}, {"A": 42,"B": "2-3） ","C": "工时（分）/只 ：","D": "4.50 ","E": "3.50 ","F": "估價人員輸入壓鑄每只需幾分鐘"}, {"A": 43,"B": "2-4） ","C": "产能 只/H ：","D": "13 ","E": "17 ","F": null}, {"A": 44,"B": "2-5） ","C": "设备费/只： ","D": "#N/A","E": "#N/A","F": null}, {"A": 45,"B": "2-6） ","C": "人工费/只： ","D": "#N/A","E": "#N/A","F": "由sheet2自動帶出"}, {"A": 46,"B": "2-7） ","C": "熔炼费（能耗）： ","D": "#N/A","E": "#N/A","F": "由sheet2自動帶出"}, {"A": 47,"B": "2-8） ","C": "良品率： ","D": "0.9","E": "0.95","F": "估價人員輸入估計良品率"}, {"A": 48,"B": null,"C": "小计： ","D": "#N/A","E": "#N/A","F": null}, {"A": 49,"B": "* ","C": "3)毛刺处理费（含粗磨） ","D": "","E": "","F": null}, {"A": 50,"B": "3-1） ","C": "工时（分）/只 ： ","D": "1.00 ","E": "1.00 ","F": "估價人員輸入去料每只需幾分鐘 "}, {"A": 51,"B": "3-2) ","C": "人工费率/H： ","D": "¥0.00 ","E": "¥0.00 ","F": "由sheet2自動帶出"}, {"A": 52,"B": null,"C": "小计： ","D": "¥0.00 ","E": "¥0.00 ","F": null}, {"A": 53,"B": "* ","C": "4)外观打磨费（入/溢料口, 分模线及一般外观瑕疵等部位做打磨） ","D": "","E": "","F": null}, {"A": 54,"B": "4-1） ","C": "工时（分）/只 ： ","D": "1.00 ","E": "1.00 ","F": "估價人員輸入打磨每只需幾分鐘 "}, {"A": 55,"B": "4-2) ","C": "人工费率/H： ","D": "¥0.00 ","E": "¥0.00 ","F": "由sheet2自動帶出"}, {"A": 56,"B": "4-3) ","C": "打磨费： ","D": "¥0.00 ","E": "¥0.00 ","F": null}, {"A": 57,"B": "4-4） ","C": "良品率： ","D": "0.99","E": "0.99","F": "估價人員輸入估計良品率"}, {"A": 58,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 59,"B": null,"C": "小计： ","D": "¥0.00 ","E": "¥0.00 ","F": null}, {"A": 60,"B": "* ","C": "5)平整度 整形费 ","D": null,"E": null,"F": null}, {"A": 61,"B": "5-1） ","C": "工时 分/只： ","D": "1.00 ","E": "1.00 ","F": "估價人員輸入平整每只需幾分鐘 "}, {"A": 62,"B": "5-2) ","C": "人工费率/H： ","D": "¥0.00 ","E": "¥0.00 ","F": "由sheet2自動帶出"}, {"A": 63,"B": "5-3） ","C": "人工费/只 ","D": "¥0.00 ","E": "¥0.00 ","F": null}, {"A": 64,"B": null,"C": "小计： ","D": "¥0.00 ","E": "¥0.00 ","F": null}, {"A": 65,"B": "* ","C": "6)机加工 ","D": "","E": "","F": null}, {"A": 66,"B": "6-1) ","C": "工时（分）/只 ： ","D": "3.00 ","E": "1.00 ","F": "估價人員輸入機加工每只需幾分鐘 "}, {"A": 67,"B": "6-2) ","C": "加工费率/H： ","D": "¥0.00 ","E": "¥0.00 ","F": "由sheet2自動帶出"}, {"A": 68,"B": "6-3） ","C": "良品率： ","D": "0.985","E": "0.985","F": "估價人員輸入估計良品率"}, {"A": 69,"B": null,"C": "小计： ","D": "#NAME?","E": "#NAME?","F": null}, {"A": 70,"B": "* ","C": "7)冷喷.热烧毛刺 &费率/分： ","D": null,"E": null,"F": null}, {"A": 71,"B": "7-1） ","C": "工时 分/只： ","D": "1.00 ","E": "1.00 ","F": "估價人員輸入機冷噴每只需幾分鐘 "}, {"A": 72,"B": "7-2） ","C": "加工费率/H： ","D": "¥0.00 ","E": "¥0.00 ","F": "由sheet2自動帶出"}, {"A": 73,"B": null,"C": "小计： ","D": "#NAME?","E": "#NAME?","F": null}, {"A": 74,"B": "* ","C": "8)喷沙.抛丸.震动研磨 &费率 ","D": null,"E": null,"F": null}, {"A": 75,"B": "8-1） ","C": "工时 分/只： ","D": "1.00 ","E": "1.00 ","F": "估價人員輸入機噴砂每只需幾分鐘 "}, {"A": 76,"B": "8-2） ","C": "加工费率/H： ","D": "¥0.00 ","E": "¥0.00 ","F": "由sheet2自動帶出"}, {"A": 77,"B": null,"C": "小计： ","D": "#NAME?","E": "#NAME?","F": null}, {"A": 78,"B": "* ","C": "9)皮膜处理 &费率 ","D": null,"E": null,"F": null}, {"A": 79,"B": "9-1) ","C": "耐腐蝕鹽霧實驗時間要求： ","D": "72小時 ","E": "96小時 ","F": "請下拉選擇鹽霧時間 "}, {"A": 80,"B": "9-2） ","C": "工件表面面积 (算单面） DM2： ","D": "1 ","E": "1 ","F": "估價人員輸入表面面積dm2 "}, {"A": 81,"B": "9-3） ","C": "加工费率/H： ","D": "#N/A","E": "#N/A","F": "由sheet2自動帶出"}, {"A": 82,"B": null,"C": "小计： ","D": "#N/A","E": "#N/A","F": null}, {"A": 83,"B": null,"C": null,"D": "","E": "","F": null}, {"A": 84,"B": "* ","C": "10)粉体烤漆.液体烤漆.丝网印： ","D": null,"E": null,"F": null}, {"A": 85,"B": "10-1） ","C": "表面要求","D": "电泳","E": "电泳","F": null}, {"A": 86,"B": "10-2） ","C": "工件表面积(算需喷漆面积）DM2： ","D": "1 ","E": "1 ","F": "估價人員輸入噴漆面積dm2"}, {"A": 87,"B": "10-3） ","C": "漆材料费/dm： ","D": "0","E": "0","F": "由sheet2自動帶出"}, {"A": 88,"B": "10-4） ","C": "烤漆设备+人工費率/dm： ","D": "0","E": "0","F": "由sheet2自動帶出"}, {"A": 89,"B": "10-5） ","C": "良品率： ","D": "0.93","E": "0.93","F": "估價人員輸入估計良品率"}, {"A": 90,"B": "10-6） ","C": "产品难度系数 K 值：K = 0.8-1.5 ","D": "1.0 ","E": "1.0 ","F": "估價人員輸入難度係數"}, {"A": 91,"B": null,"C": "小计： ","D": "#N/A","E": "#N/A","F": null}, {"A": 92,"B": "* ","C": "11)其它特殊处理： ","D": null,"E": null,"F": null}, {"A": 93,"B": "11-1） ","C": "工时 分/只： ","D": null,"E": null,"F": null}, {"A": 94,"B": "11-2） ","C": "费用/只 ","D": null,"E": null,"F": "無上述估價項目自行增列"}, {"A": 95,"B": null,"C": "小计： ","D": "¥0.00 ","E": "¥0.00 ","F": null}, {"A": 96,"B": "* ","C": "12)气密性测试 ： ","D": null,"E": null,"F": null}, {"A": 97,"B": "12-1） ","C": "工时 分/只： ","D": "1","E": "1","F": "估價人員輸入气测工时（分）"}, {"A": 98,"B": "12-2） ","C": "气测费/只 ","D": "¥1.00 ","E": "¥1.00 ","F": null}, {"A": 99,"B": null,"C": "小计： ","D": "¥1.00 ","E": "¥1.00 ","F": null}, {"A": 100,"B": "* ","C": "13)筛选包装 & 费率 /H： ","D": null,"E": null,"F": null}, {"A": 101,"B": "13-1） ","C": "工时 分/只： ","D": "1.0 ","E": "1.0 ","F": "估價人員輸入篩選包裝每只需幾分鐘"}, {"A": 102,"B": "13-2) ","C": "人工费/只 ","D": "¥0.00 ","E": "¥0.00 ","F": "由sheet2自動帶出"}, {"A": 103,"B": "13-3) ","C": "包材费： ","D": "¥1.00 ","E": "¥1.00 ","F": "估價人員輸入每只包材費"}, {"A": 104,"B": null,"C": "小计： ","D": "¥1.00 ","E": "¥1.00 ","F": null}, {"A": 105,"B": null,"C": "Sub-Total 合计： ","D": "#N/A","E": "#N/A","F": null}, {"A": 106,"B": "* ","C": "管销（Overhead 10%）+（利润profit5%） = 15% ","D": "#N/A","E": "#N/A","F": null}, {"A": 107,"B": "* ","C": "其他五金配件： ","D": "¥10.00 ","E": "¥0.00 ","F": "估價人員輸入每只需要五金配件"}, {"A": 108,"B": "* ","C": "组装费： ","D": "¥20.00 ","E": "¥0.00 ","F": "估價人員輸入每只組裝費"}, {"A": 109,"B": null,"C": "组装 小计： ","D": "¥30.00 ","E": "¥0.00 ","F": null}, {"A": 110,"B": null,"C": "总计（未税）： ","D": "#N/A","E": "#N/A","F": null}, {"A": 111,"B": null,"C": "VAT 税金：17% ","D": "#N/A","E": "#N/A","F": null}, {"A": 112,"B": null,"C": "海外运输费用： ","D": "¥0.00 ","E": "¥0.00 ","F": ""}, {"A": 113,"B": "","C": "总计（含税）： ","D": "#N/A","E": "#N/A","F": ""}, {"A": 114,"B": "","C": "总计（美元）： ","D": "#N/A","E": "#N/A","F": null}, {"A": 1,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 2,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 3,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 4,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 5,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 6,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 7,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 8,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 9,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 10,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 11,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 12,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 13,"B": "年需求量","C": "年需求量","D": null,"E": null,"F": null}, {"A": 14,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 15,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 16,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 17,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 18,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 19,"B": null,"C": "压铸模费用：","D": null,"E": null,"F": null}, {"A": 20,"B": null,"C": "切边模费用：","D": null,"E": null,"F": null}, {"A": 21,"B": null,"C": "加工夹治具费用：","D": null,"E": null,"F": null}, {"A": 22,"B": null,"C": "烤漆夹治具费用：","D": null,"E": null,"F": null}, {"A": 23,"B": "模具總價","C": "模具总价","D": null,"E": null,"F": null}, {"A": 24,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 25,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 26,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 27,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 28,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 29,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 30,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 31,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 32,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 33,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 34,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 35,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 36,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 37,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 38,"B": "材料费","C": "材料费","D": null,"E": null,"F": null}, {"A": 39,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 40,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 41,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 42,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 43,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 44,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 45,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 46,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 47,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 48,"B": "压铸费","C": "压铸费","D": null,"E": null,"F": null}, {"A": 49,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 50,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 51,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 52,"B": "毛刺处理费","C": "毛刺处理费","D": null,"E": null,"F": null}, {"A": 53,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 54,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 55,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 56,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 57,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 58,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 59,"B": "4)外观打磨费","C": "4)外观打磨费","D": null,"E": null,"F": null}, {"A": 60,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 61,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 62,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 63,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 64,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 65,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 66,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 67,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 68,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 69,"B": "机加工","C": "机加工","D": null,"E": null,"F": null}, {"A": 70,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 71,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 72,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 73,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 74,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 75,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 76,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 77,"B": "冷喷.热烧毛刺","C": "冷喷.热烧毛刺","D": null,"E": null,"F": null}, {"A": 78,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 79,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 80,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 81,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 82,"B": "皮膜处理","C": "皮膜处理","D": null,"E": null,"F": null}, {"A": 83,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 84,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 85,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 86,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 87,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 88,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 89,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 90,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 91,"B": "粉体液体烤漆丝网","C": "粉体液体烤漆丝网印","D": null,"E": null,"F": null}, {"A": 92,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 93,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 94,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 95,"B": "其它特殊处理","C": "其它特殊处理","D": null,"E": null,"F": null}, {"A": 96,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 97,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 98,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 99,"B": "气密性测试","C": "气密性测试","D": null,"E": null,"F": null}, {"A": 100,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 101,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 102,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 103,"B": null,"C": null,"D": null,"E": null,"F": null}, {"A": 104,"B": "筛选包装","C": "筛选包装","D": null,"E": null,"F": null}, {"A": 105,"B": "Sub-Tota","C": "Sub-Total 合计","D": null,"E": null,"F": null}, {"A": 106,"B": "管销（Overh","C": "管销（Overhead） 10% +（利润）profit5% = 15% ","D": null,"E": null,"F": null}, {"A": 107,"B": "其他五金配件：","C": "其他五金配件：","D": null,"E": null,"F": null}, {"A": 108,"B": "组装费：","C": "组装费：","D": null,"E": null,"F": null}, {"A": 109,"B": "组装 小计：","C": "组装 小计：","D": null,"E": null,"F": null}, {"A": 110,"B": "总计（未税）：","C": "总计（未税）：","D": null,"E": null,"F": null}, {"A": 111,"B": "VAT 税金：1","C": "VAT 税金：17%","D": null,"E": null,"F": null}, {"A": 112,"B": "海外运输费用：","C": "海外运输费用：","D": null,"E": null,"F": null}, {"A": 113,"B": "总计（含税）：","C": "总计（含税）：","D": null,"E": null,"F": null}, {"A": 114,"B": "总计（美元）：","C": "总计（美元）：","D": null,"E": null,"F": null}]';
+
+                // 
+                // 
+                // str+=btnTitleStr;
+                // str+="<hr>";
+                var btnTitleObj = $.parseJSON(jsonStr);
+                // str+=btnTitleObj[1]['B'];
+                //strRow[i]="xxx";
+                for (var i = 1; i <= 114; i++) {
+
+                    // str+=jsonObj[i]['C'];
+                    if (btnTitleObj[i]['B'] == null) {
+
+                    } else if (btnTitleObj[i]['B'].length == 0) {
+
+                    } else {
+                        str += "strSeg[" + i + "]='";
+                        str += btnTitleObj[i]['B'];//WHY?
+                        str += "';";
+                        str += "<br>";
+                    }
+
+
+                    // str+=getBtnVal(i);
+
+                }
+
+                //    str="XXX";
+                showMsg('mark12345', str);
+
+
+
+            }
+            showMark12345();
+            // start();
+            // showLevel1Btns();
+            // showLevel2Btns();
+            // showLevel3aBtns();
+            // showLevel3bBtns();
+            // showLevel3cBtns();
+
+
+        </script>
+
+    </body>
+</html>

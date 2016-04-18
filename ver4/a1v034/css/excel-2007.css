@@ -1,0 +1,74 @@
+/*table { table-layout: fixed; }
+th, td { width: 20px; }*/
+
+
+input{
+    background-color: lightgray;
+    border: 1px solid black;
+    /*    color: darkblue;
+        padding: 8px 12px;
+        font-size: 95%;
+        border-radius:10px;
+        outline-width: 0;*/
+}
+
+.ExcelTable2007 {
+    /*table-layout: fixed;*/
+    /*border: 1px solid #B0CBEF;*/
+    border: 1px solid black;
+
+    border-width: 1px 0px 0px 1px;
+    font-size: 11pt;
+    font-family: Calibri;
+    font-weight: 100;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+.ExcelTable2007 TH {
+    /*width: 30px;*/
+    /*background-image: url(excel-2007-header-bg.gif);*/
+    background-color: lavender;
+    background-repeat: repeat-x; 
+    font-weight: normal;
+    font-size: 14px;
+    /*border: 1px solid #9EB6CE;*/
+    border: 1px solid black;
+
+    border-width: 0px 1px 1px 0px;
+    /*height: 17px;*/
+}
+
+.ExcelTable2007 TD {
+    /*width: 30px;*/
+    /*border: 0px;*/
+    background-color: white;
+    border: 1px solid black;
+    padding: 0px 4px 0px 2px;
+    /*border: 1px solid #D0D7E5;*/
+    border-width: 0px 1px 1px 0px;
+}
+
+.ExcelTable2007 TD B {
+      /*width: 30px;*/
+    /*border: 0px;*/
+    border: 1px solid black;
+    background-color: white;
+    font-weight: bold;
+}
+
+.ExcelTable2007 TD.heading {
+      /*width: 30px;*/
+    /*background-color: #E4ECF7;*/
+    text-align: center;
+    /*border: 1px solid #9EB6CE;*/
+    border: 1px solid black;
+    border-width: 0px 1px 1px 0px;
+}
+
+.ExcelTable2007 TH.heading {
+      /*width: 30px;*/
+    background-color: lavender;
+    /*background-image: url(excel-2007-header-left.gif);*/
+    background-repeat: none;
+}
