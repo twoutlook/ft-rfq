@@ -11,7 +11,7 @@ setRateArr = [131];
 var isSales = false;
 var viewArr = new Array(20);
 //viewArr[0] = [3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 166, 167, 168, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 160, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 131, 106, 107, 108, 109, 110, 111, 112, 113, 114];
-viewArr[0] = [3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 166, 167, 168, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 160, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 131, 106, 107, 108, 109, 110,  114];
+viewArr[0] = [3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 166, 167, 168, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 160, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 131, 106, 107, 108, 109, 110, 114];
 viewArr[1] = [3, 4, 6, 7, 8, 9, 10, 11, 12, 13];
 viewArr[2] = [7, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
 viewArr[3] = [7, 38, 48, 52, 59, 64, 69, 73, 77, 82, 91, 95, 99, 104, 105];
@@ -341,7 +341,7 @@ function getTxtInput(item, row) {
 //    var str = "&nbsp;<input type='text' maxlength='60' size='16' value='" + value + "' " + "id='" + id + "'   />";
 
     var className = "";
- //   str += "<button onclick='" + trigger + "' type='submit' " + className + " > ok </button>";
+    //   str += "<button onclick='" + trigger + "' type='submit' " + className + " > ok </button>";
     return str;
 }
 function getDdl012(item) {
@@ -2392,9 +2392,12 @@ function doEntire整表計算___各工序() {
         dataGrp[item][34] = dataGrp[item][34].toFixed(2);
 
         //dataGrp[item][36] = (dataGrp[item][30] - dataGrp[item][35]) * dataGrp[item][33] / 1000;
-       dataGrp[item][36] = (dataGrp[item][30] - dataGrp[item][35]) * dataGrp[item][33] / 1000/dataGrp[item][16];
-       
-        dataGrp[item][37] = (dataGrp[item][31] + dataGrp[item][33]) * dataGrp[item][30] * 0.02 / 1000;
+        //ver4
+        dataGrp[item][36] = (dataGrp[item][30] - dataGrp[item][35]) * dataGrp[item][33] / 1000 / dataGrp[item][16];
+
+        // dataGrp[item][37] = (dataGrp[item][31] + dataGrp[item][33]) * dataGrp[item][30] * 0.02 / 1000;
+        //ver4
+        dataGrp[item][37] = (dataGrp[item][31] + dataGrp[item][33]) * dataGrp[item][30] * 0.02 / 1000 / dataGrp[item][16];
         //DEBUG    TEXT NUMBER PROBLEM
         //dataGrp[item][37] = dataGrp[item][31] + dataGrp[item][33];
 
@@ -2550,7 +2553,7 @@ function setMainGrp() {
     for (var item = 0; item < COL_CNT; item++) {
 //        setMain(item, 10, getDdl010(item));
         setMain(item, 10, getDdl010V2(item));
-        
+
 
 //        setMain(item, 29, getDdl029V2(item));
 
@@ -2738,7 +2741,7 @@ function getMainTableGrpByArray(arr) {
     var tdClass = new Array(2);
     tdClass[0] = "<td class='tdNumber'>";
     tdClass[1] = "<td class='tdText'>";
-    var textArr = [7, 8, 9, 10, 12, 13, 16, 17, 18, 29, 40, 79, 85 ];
+    var textArr = [7, 8, 9, 10, 12, 13, 16, 17, 18, 29, 40, 79, 85];
 
     for (var i = 0; i < arr.length; i++) {
         str += "<tr>";
