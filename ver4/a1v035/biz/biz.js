@@ -2389,7 +2389,15 @@ function doEntire整表計算___各工序() {
 
         // 1) 材料費
         dataGrp[item][32] = (dataGrp[item][30] * dataGrp[item][31]) / 1000;
-        dataGrp[item][34] = (dataGrp[item][33] / dataGrp[item][31]);
+
+
+//        dataGrp[item][34] = (dataGrp[item][33] / dataGrp[item][31]);
+        //ver4
+        // (【31】* 【16】) /  ( 【31】* 【16】 +【33】)
+        dataGrp[item][34] = (dataGrp[item][31] * dataGrp[item][16]) / (dataGrp[item][31] * dataGrp[item][16] + dataGrp[item][33]);
+
+
+
         dataGrp[item][34] = dataGrp[item][34].toFixed(2);
 
         //dataGrp[item][36] = (dataGrp[item][30] - dataGrp[item][35]) * dataGrp[item][33] / 1000;
