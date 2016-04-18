@@ -72,9 +72,8 @@ session_start();                // 首先开启session
 <ul>
     <li><mark>DOING...已完成。</mark>
         <ul>
-            <li>biz/biz.js function doEntire整表計算___各工序()</li>
-            <li>...。</li>
-            <li>... 。</li>
+           <li>biz/biz.js</li>
+            <li>將  viewArr[0] = [3, 4, 6, ..., 46, ... 114]; 的 46 去掉。</li>
                
         </ul>
     
