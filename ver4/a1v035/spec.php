@@ -50,11 +50,37 @@ session_start();                // 首先开启session
 公式計算（【31】+【33】）*【30】 * 0.02/1000<br>
 ***修正要除模穴數***<br>
 （（【31】+【33】）*【30】 * 0.02/1000 ）/【16】<br>
+
+<ul>
+    <li><mark>DOING...已完成。</mark>
+        <ul>
+            <li>biz/biz.js function doEntire整表計算___各工序()</li>
+            <li>...。</li>
+            <li>... 。</li>
+               
+        </ul>
+    
+</li>
+</ul>
+<hr>
+
 <br>===3===<br>
 46 2-7）<br>
 熔炼费（能耗）：  <br>
 公式計算【133】* 【31】<br>
 ***刪除該項***<br>
+<ul>
+    <li><mark>DOING...已完成。</mark>
+        <ul>
+            <li>biz/biz.js function doEntire整表計算___各工序()</li>
+            <li>...。</li>
+            <li>... 。</li>
+               
+        </ul>
+    
+</li>
+</ul>
+<hr>
 <br>===4===<br>
 34  1-6）<br>
 料柄流道渣包比率 ：  <br>
@@ -63,7 +89,18 @@ session_start();                // 首先开启session
 ***修正為 料柄流道渣包比率 => 產品重量 / 整模重量  ***<br>
 公式計算<br>
 (【31】* 【16】) /  ( 【31】* 【16】 +【33】)<br>
-
+<ul>
+    <li><mark>DOING...已完成。</mark>
+        <ul>
+            <li>biz/biz.js function doEntire整表計算___各工序()</li>
+            <li>...。</li>
+            <li>... 。</li>
+               
+        </ul>
+    
+</li>
+</ul>
+<hr>
 <br>===5===<br>
 含稅不含稅部份<br>
 ***只計算不含稅，取消【111】【112】【113】***<br>
