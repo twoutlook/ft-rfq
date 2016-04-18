@@ -16,8 +16,8 @@ if ($log=='user1' && $pwd=='Rfq@2016' ){
     echo "granted!";
     //  Session["user"] = "user1";
       $_SESSION["user"] = "user1";
-    header( 'Location: http://120.26.88.32/a1login/portal.php' ) ;
+    header( 'Location: portal.php' ) ;
 }else{
     echo "user/pass not authorized";
-    header( 'Location: http://120.26.88.32/a1login/login_fail.php' ) ;
+    header( 'Location: login_fail.php' ) ;
 }
