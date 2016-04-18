@@ -86,11 +86,11 @@ if (!($_SESSION['user'] == 'user1' || $_SESSION['user'] == 'user2' || $_SESSION[
                 公式計算<br>
                 (【31】* 【16】) /  ( 【31】* 【16】 +【33】)<br>
                 <ul>
-                    <li><mark>DOING...已完成。</mark>
+                    <li><mark>已完成。</mark>
                         <ul>
                             <li>biz/biz.js function doEntire整表計算___各工序()</li>
-                            <li>...。</li>
-                            <li>... 。</li>
+                            <li>已按更新要求調整計算公式。</li>
+                           
 
                         </ul>
 
