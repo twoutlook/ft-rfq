@@ -7,7 +7,7 @@
     <!--<![endif]-->
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>a001 &rsaquo; Log In</title>
+        <title>RFQ Login</title>
         <!--<link rel='stylesheet' id='buttons-css'  href='https://a001-twoutlook-1.c9users.io/wp-includes/css/buttons.min.css?ver=4.4.2' type='text/css' media='all' />-->
         <!--<link rel='stylesheet' id='open-sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.4.2' type='text/css' media='all' />-->
         <!--<link rel='stylesheet' id='dashicons-css'  href='https://a001-twoutlook-1.c9users.io/wp-includes/css/dashicons.min.css?ver=4.4.2' type='text/css' media='all' />-->
@@ -17,7 +17,7 @@
     </head>
     <body class="login login-action-login wp-core-ui  locale-en-us">
         <div id="login">
-            <h1>A001 login</h1>
+            <h1>RFQ Login</h1>
 
             <form name="loginform" id="loginform" action="login_check.php" method="post">
                 <p>
